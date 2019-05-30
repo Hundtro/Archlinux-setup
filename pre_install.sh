@@ -46,6 +46,8 @@
  PACS+=' libreoffice-still'       #MS Office alternative
  PACS+=' gvfs'                  #Usb automount for desktops
 #PACS+=' virtualbox'            #Environment for virtual OS
+ PACS+=' ntfs-3g'               #For NTFS
+ PACS+=' unrar'                 #For rar archives
  
 #
 # Begin install
