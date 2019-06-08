@@ -43,11 +43,13 @@
  PACS+=' gst-plugins-ugly'      #Qutebrowser html5 plugins
  PACS+=' wvdial'                #For 3G modem connection
  PACS+=' usb_modeswitch'        #For modem mode-change to 3G
- PACS+=' libreoffice-still'       #MS Office alternative
+ PACS+=' libreoffice-still'     #MS Office alternative
  PACS+=' gvfs'                  #Usb automount for desktops
 #PACS+=' virtualbox'            #Environment for virtual OS
  PACS+=' ntfs-3g'               #For NTFS
  PACS+=' unrar'                 #For rar archives
+ PACS+=' bc'                    #Console calculator
+ PACS+=' exfat-utils'           #For exFAT
  
 #
 # Begin install
