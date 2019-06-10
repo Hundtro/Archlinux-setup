@@ -20,7 +20,7 @@
  PACS+=' alsa-utils'            #For alsamixer
  PACS+=' xorg'                  #Basic X environment
  PACS+=' xorg-xinit'            #For xinit profile
- PACS+=' elinks'                #Console web browser
+ PACS+=' links'                #Console web browser
  PACS+=' ranger'                #Console file manager
  PACS+=' mupdf'                 #Console pdf viewer
  PACS+=' feh'                   #Console image viewer, set root wallpaper
