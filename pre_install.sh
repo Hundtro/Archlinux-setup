@@ -20,7 +20,7 @@
  PACS+=' alsa-utils'            #For alsamixer
  PACS+=' xorg'                  #Basic X environment
  PACS+=' xorg-xinit'            #For xinit profile
- PACS+=' links'                #Console web browser
+ PACS+=' links'                 #Console web browser
  PACS+=' ranger'                #Console file manager
  PACS+=' mupdf'                 #Console pdf viewer
  PACS+=' feh'                   #Console image viewer, set root wallpaper
@@ -32,25 +32,28 @@
 #PACS+=' dmenu'                 #For dmw install
 #PACS+=' xfce4'                 #Light desktop environment
 #PACS+=' xfce4-goodies'         #Additional tools for xfce4
- PACS+=' qtcreator'             #IDE For C/C++ and Qt
- PACS+=' qutebrowser'           #Qt web browser
+#PACS+=' qtcreator'             #IDE For C/C++ and Qt
+#PACS+=' qutebrowser'           #Qt web browser
+ PACS+=' firefox'               #Firefox web browser
  PACS+=' xpdf'                  #Qt pdf viewer
  PACS+=' vlc'                   #Good media/video player
- PACS+=' gst-libav'             #Qutebrowser html5 plugins
- PACS+=' gst-plugins-base'      #Qutebrowser html5 plugins
- PACS+=' gst-plugins-good'      #Qutebrowser html5 plugins
- PACS+=' gst-plugins-bad'       #Qutebrowser html5 plugins
- PACS+=' gst-plugins-ugly'      #Qutebrowser html5 plugins
+#PACS+=' gst-libav'             #Qutebrowser html5 plugins
+#PACS+=' gst-plugins-base'      #Qutebrowser html5 plugins
+#PACS+=' gst-plugins-good'      #Qutebrowser html5 plugins
+#PACS+=' gst-plugins-bad'       #Qutebrowser html5 plugins
+#PACS+=' gst-plugins-ugly'      #Qutebrowser html5 plugins
  PACS+=' wvdial'                #For 3G modem connection
  PACS+=' usb_modeswitch'        #For modem mode-change to 3G
  PACS+=' libreoffice-still'     #MS Office alternative
- PACS+=' gvfs'                  #Usb automount for desktops
+#PACS+=' gvfs'                  #Usb automount for desktops
 #PACS+=' virtualbox'            #Environment for virtual OS
  PACS+=' ntfs-3g'               #For NTFS
  PACS+=' unrar'                 #For rar archives
  PACS+=' bc'                    #Console calculator
  PACS+=' exfat-utils'           #For exFAT
- 
+ PACS+=' tor'                   #Tor
+ PACS+=' gdb'                   #GNU Debugger
+
 #
 # Begin install
 # 
