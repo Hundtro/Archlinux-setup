@@ -53,6 +53,9 @@
  PACS+=' exfat-utils'           #For exFAT
  PACS+=' tor'                   #Tor
  PACS+=' gdb'                   #GNU Debugger
+ PACS+=' openconnect'           #Cisco Any Connect vpn client
+ PACS+=' rdesktop'              #For RDP connections
+ PACS+=' dia'                   #Diagram building tool
 
 #
 # Begin install
