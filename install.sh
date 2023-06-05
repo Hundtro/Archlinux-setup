@@ -92,7 +92,7 @@ ping -q -c3 8.8.8.8
 if [ $? -ne 0 ];
 then
     echo '[ERROR MESSAGE]No Internet connection! Exit.'
-    exit 1
+	exit 1
 else
     echo '[INFO MESSAGE]Internet connection OK!'
 fi
@@ -107,12 +107,12 @@ mount $PT_ROOT /mnt
 if [ $MAKE_SWAP -eq 1 ];
 then
     mkswap $PT_SWAP
-    swapon $PT_SWAP
+	swapon $PT_SWAP
 fi
 
 if [ $MAKE_DUAL -eq 0 ];
 then
-    mkfs.fat -F 32 $PT_EFI
+	mkfs.fat -F 32 $PT_EFI
 fi
 
 mkdir /mnt/efi
@@ -124,7 +124,7 @@ pacstrap /mnt base base-devel $PACS
 if [ $? -ne 0 ];
 then
     echo '[ERROR MESSAGE]Install Error! Exit'
-    exit 2
+	exit 2
 fi
 
 echo '[INFO MESSAGE]Generate fstab'
@@ -154,9 +154,14 @@ echo "[INFO MESSAGE]Enter password for root"
 arch-chroot /mnt passwd
 
 echo "[INFO MESSAGE]Set up wheel in sudoers"
-arch-chroot /mnt vim /etc/sudoers
+arch-chroot /mnt sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
 
 echo "[INFO MESSAGE]Setup GRUB"
 arch-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
+if [ $MAKE_DUAL -eq 1 ];
+then
+	arch-chroot /mnt sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
+fi
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
+
 echo "[INFO MESSAGE]Finish"
