@@ -115,8 +115,8 @@ then
 	mkfs.fat -F 32 $PT_EFI
 fi
 
-mkdir /mnt/efi
-mount $PT_EFI /mnt/efi
+mkdir /mnt/boot/efi
+mount $PT_EFI /mnt/boot/efi
 
 echo '[INFO MESSAGE]Install packages'
 pacstrap /mnt base base-devel $PACS
@@ -157,7 +157,7 @@ echo "[INFO MESSAGE]Set up wheel in sudoers"
 arch-chroot /mnt sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers
 
 echo "[INFO MESSAGE]Setup GRUB"
-arch-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
+arch-chroot /mnt grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 if [ $MAKE_DUAL -eq 1 ];
 then
 	arch-chroot /mnt sed -i 's/#GRUB_DISABLE_OS_PROBER=false/GRUB_DISABLE_OS_PROBER=false/g' /etc/default/grub
