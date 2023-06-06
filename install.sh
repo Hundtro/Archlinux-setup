@@ -115,7 +115,7 @@ then
 	mkfs.fat -F 32 $PT_EFI
 fi
 
-mkdir /mnt/boot/efi
+mkdir -p /mnt/boot/efi
 mount $PT_EFI /mnt/boot/efi
 
 echo '[INFO MESSAGE]Install packages'
