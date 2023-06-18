@@ -80,9 +80,12 @@ PACS+=' libreoffice-still' #MS Office alternative
 # Packages:Dev
 PACS+=' git'               #Git version control
 PACS+=' gdb'               #GNU Debugger
-PACS+=' dia'               #Diagram building tool
+#PACS+=' dia'              #Diagram building tool
 PACS+=' cmake'             #CMake build tool
 PACS+=' qtcreator'         #IDE For C/C++ and Qt
+PACS+=' dotnet-runtime'    #.NET Core run tools
+PACS+=' dotnet-sdk'        #.NET Core development tools
+PACS+=' aspnet-runtime'    #ASP.NET development tools
 
 # Installation
 echo '[INFO MESSAGE]Begin install'
