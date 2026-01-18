@@ -121,7 +121,7 @@ mkdir -p /mnt/boot/efi
 mount $PT_EFI /mnt/boot/efi
 
 echo '[INFO MESSAGE]Install packages'
-pacstrap /mnt base $PACS
+pacstrap /mnt base base-devel $PACS
 
 if [ $? -ne 0 ];
 then
