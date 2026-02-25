@@ -17,6 +17,7 @@ KEYMAP="pl"
 #Base
 PACS+=' linux'
 PACS+=' linux-firmware'
+PACS+=' linux-headers'
 PACS+=' archlinux-keyring'
 PACS+=' sudo'
 PACS+=' grub'
@@ -28,26 +29,14 @@ PACS+=' iw'
 PACS+=' wpa_supplicant'
 PACS+=' dhcpcd'
 PACS+=' netctl'
+PACS+=' networkmanager'
 PACS+=' dialog'
+PACS+=' vim'
+PACS+=' git'
 PACS+=' mesa'
 #PACS+=' intel-ucode'
 #PACS+=' xf86-video-intel'
 #PACS+=' vulkan-radeon'
-PACS+=' vim'
-PACS+=' git'
-PACS+=' plasma-desktop'
-PACS+=' sddm'
-PACS+=' firefox'
-PACS+=' plasma-nm'
-PACS+=' plasma-pa'
-PACS+=' dolphin'
-PACS+=' konsole'
-PACS+=' kdeplasma-addons'
-PACS+=' kde-gtk-config' 
-PACS+=' breeze-gtk'
-PACS+=' vlc'
-PACS+=' viewnior'
-PACS+=' kate'
 
 #Other
 PACS+=' acpi'
@@ -62,6 +51,7 @@ PACS+=' ntfs-3g'
 #PACS+=' tor'
 #PACS+=' openconnect'
 #PACS+=' rdesktop'
+PACS+=' firefox'
 #PACS+=' qutebrowser'
 #PACS+=' gst-libav'
 #PACS+=' gst-plugins-base'
@@ -85,6 +75,7 @@ PACS+=' cmake'
 #PACS+=' dotnet-runtime'
 #PACS+=' dotnet-sdk'
 #PACS+=' aspnet-runtime'
+PACS+=' discord'
 
 #Installation
 echo '[INFO MESSAGE]Begin install'
@@ -168,6 +159,6 @@ arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "[INFO MESSAGE]Finalizing setup"
 arch-chroot /mnt systemctl enable NetworkManager
-arch-chroot /mnt systemctl enable sddm
+arch-chroot /mnt systemctl enable gdm
 
 echo "[INFO MESSAGE]Finish"
