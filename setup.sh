@@ -37,6 +37,7 @@ PACS+=' mesa'
 #PACS+=' intel-ucode'
 #PACS+=' xf86-video-intel'
 #PACS+=' vulkan-radeon'
+PACS+=' gnome'
 
 #Other
 PACS+=' acpi'
